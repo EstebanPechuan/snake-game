@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Snake Game</title>
+
+	<link rel="stylesheet" href="css/
+	styles.css">
+
+	<link rel="shortcut icon" type="image/png" href="img/fav.png">
+
+</head>
+<body onkeydown="key(event)">
+
+	<section>
+		<div class="sectText">
+			<div class="text1">
+				<div class="letra">S</div>
+				<div class="letra">N</div>
+				<div class="letra">A</div>
+				<div class="letra">K</div>
+				<div class="letra">E</div>
+			</div>
+			<div class="text2">
+				<div class="letra">G</div>
+				<div class="letra">A</div>
+				<div class="letra">M</div>
+				<div class="letra">E</div>
+			</div>
+		</div>
+		<div class="botones">
+			<a href="html/sinBordes.html">Sin Bordes</a>
+			<a href="html/conBordes.html">Con Bordes</a>
+		</div>
+	</section>
+
+	<script>
+		var letra = document.querySelectorAll('.letra')
+
+		for (var i = 0; i <= letra.length; i++) {
+			letra[i].setAttribute('style', 'color: rgb(' + cambiarColor() + ', ' + cambiarColor() + ', ' + cambiarColor() + ');')
+		}
+
+		function cambiarColor() {
+			colorArr = Math.floor(Math.random() * 255)
+			return colorArr
+		}
+	</script>
+</body>
+</html>
